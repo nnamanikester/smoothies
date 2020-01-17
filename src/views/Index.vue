@@ -80,7 +80,4 @@ export default {
     color: #aaa;
     font-size: 1.4em;
   }
-  .index .card {
-    margin: auto 30px;
-  }
 </style>
