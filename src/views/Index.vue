@@ -1,6 +1,6 @@
 <template>
   <div class="index container row">
-    <div class="col s12 m6 l4" v-for="smoothie in smoothies" :key="smoothie.id">
+    <div class="col s12 m6 l6" v-for="smoothie in smoothies" :key="smoothie.id">
       <div class="card">
         <i class="material-icons delete" @click="deleteSmoothie(smoothie.id)">delete</i>
         <div class="card-content">
