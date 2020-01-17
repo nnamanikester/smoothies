@@ -1,20 +1,22 @@
 <template>
-  <div class="index container">
-    <div class="card" v-for="smoothie in smoothies" :key="smoothie.id">
-      <i class="material-icons delete" @click="deleteSmoothie(smoothie.id)">delete</i>
-      <div class="card-content">
-        <h2 class="indigo-text">{{ smoothie.title }}</h2>
-        <ul class="ingredients">
-          <li v-for="(ing, index) in smoothie.ingredients" :key="index">
-            <span class="chip">{{ ing }}</span>
-          </li>
-        </ul>
+  <div class="index container row">
+    <div class="col s12 m6 l4" v-for="smoothie in smoothies" :key="smoothie.id">
+      <div class="card">
+        <i class="material-icons delete" @click="deleteSmoothie(smoothie.id)">delete</i>
+        <div class="card-content">
+          <h2 class="indigo-text">{{ smoothie.title }}</h2>
+          <ul class="ingredients">
+            <li v-for="(ing, index) in smoothie.ingredients" :key="index">
+              <span class="chip">{{ ing }}</span>
+            </li>
+          </ul>
+        </div>
+        <span class="btn-floating btn-large halfway-fab pink">
+          <router-link :to="{ name: 'EditSmoothie', params: { smoothie_slug: smoothie.slug } }">
+            <i class="material-icons">edit</i>
+          </router-link>
+        </span>
       </div>
-      <span class="btn-floating btn-large halfway-fab pink">
-        <router-link :to="{ name: 'EditSmoothie', params: { smoothie_slug: smoothie.slug } }">
-          <i class="material-icons">edit</i>
-        </router-link>
-      </span>
     </div>
   </div>
 </template>
@@ -57,9 +59,6 @@ export default {
 
 <style>
   .index {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
     margin-top: 60px;
   }
   .index h2 {
@@ -80,5 +79,8 @@ export default {
     cursor: pointer;
     color: #aaa;
     font-size: 1.4em;
+  },
+  .index .card {
+    margin: auto 30px;
   }
 </style>
