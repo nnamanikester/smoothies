@@ -1,24 +1,25 @@
 # smoothies
 
+## View Project Live
+
+```
+https://smoothie-kester.web.app/
+```
+
 ## Project setup
+```
+Clone Repository
+```
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### View project on local development server
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compiles and Builds project
 ```
 yarn build
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
